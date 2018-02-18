@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Epicture</string>
+    <string name="menu_instagram_connect">Connect to Instagram</string>
+    <string name="activity_main_no_identification">You are not connected to Instagram, please click on the Instagram logo to connect</string>
+    <string name="default_naming">Default</string>
+    <string name="Profile">Profile</string>
+    <string name="Profile_pic">Profile pic</string>
+    <string name="url_picture">Url_picture</string>
+    <string name="search">Search...</string>
+    <string name="comments">Type your comment</string>
+</resources>

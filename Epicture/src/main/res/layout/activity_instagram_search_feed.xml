@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/diverColor">
+
+    <RelativeLayout
+        android:id="@+id/activity_instagram_feed_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/instagram_feed_search_epicture_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp"
+            android:text="@string/app_name"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlank"
+            android:layout_centerVertical="true"/>
+        <Button
+            android:id="@+id/instagram_feed_search_edittext_done"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textSize="10sp"
+            android:text="SEARCH"
+            android:textColor="@color/colorBlank"
+            style="?android:attr/borderlessButtonStyle"
+            android:onClick="onClickButtonSearchList"/>
+        <EditText
+            android:id="@+id/instagram_feed_search_edittext"
+            android:layout_toStartOf="@id/instagram_feed_search_edittext_done"
+            android:layout_toEndOf="@id/instagram_feed_search_epicture_logo"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/colorBlank"
+            android:hint="@string/search"
+            android:textColor="@color/colorBlank"
+            android:textColorHint="@color/colorBlank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <RadioGroup
+        android:background="@color/colorBlank"
+        android:layout_below="@id/activity_instagram_feed_search_bar"
+        android:id="@+id/instagram_feed_search_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginStart="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search by : "/>
+
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/instagram_feed_search_radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tag"/>
+
+        <RadioButton
+            android:checked="false"
+            android:id="@+id/instagram_feed_search_radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Global-Query"/>
+    </RadioGroup>
+    <ListView
+        android:background="@color/colorBlank"
+        android:id="@+id/instagram_feed_search_list_view"
+        android:layout_below="@id/instagram_feed_search_radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:dividerHeight="10dp"
+        android:divider="@color/diverColor"/>
+</RelativeLayout>
